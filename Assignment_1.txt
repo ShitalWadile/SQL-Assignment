@@ -1,0 +1,8 @@
+Select *From Customer;
+
+select *From Customer
+Where Country LIKE'A%'
+OR Country LIKE 'I%';
+
+Select *From Customer
+Where Country LIKE '__i';

@@ -1,0 +1,43 @@
+Select *From Customer
+Where Country = 'Germany';
+
+Select EmployeeName
+From EmployeeTb;
+
+
+Select *From Customer
+Where FirstName like '_u%';
+
+select UnitPrice,ProductName,
+ Case
+  When UnitPrice <10 Then'Price Greater than 10'
+ When UnitPrice > 20 Then'Price less than 20'
+ END AS UNITTEXT
+ From ProductTable ;
+
+Select *From OrderTable
+ Order by OrderDate;
+
+ Select AVG(Quantity)
+ From OrderItemTb;
+
+ Select*from ProductTable
+ where Product_Sup='Exiotic_Liq';
+ 
+ Select AVG(Quantity)
+ From OrderItemTb;
+
+select Shiping_C_Name
+From ProductTable;
+
+select *From EmployeeTb;
+
+Select id,ProductName,ProductCategory,UnitPrice
+From ProductTable;
+
+select Sum(UnitPrice),
+CASE 
+When UnitPrice >50 Then ' It is NET Shiping_Sup'
+END AS QuntityText
+FROM ProductTable;
+

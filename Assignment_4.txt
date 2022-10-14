@@ -1,0 +1,57 @@
+select Sum(UnitPrice),
+Case 
+When unitprice >50 Then'IT IS > 50'
+End 
+From ProductTable 
+Where Product_sup ='Exiotic_Liq'
+Group by Unitprice;
+
+
+
+Select *From EmployeeTb
+Order by JoiningDate ASC;
+
+Select EmployeeName,JoiningDate
+From EmployeeTb
+Where JoiningDate Between'10-10-2022'AND '12-10-2022';
+
+select MIN(UnitPrice),MAX(UnitPrice)
+From ProductTable;
+
+
+Select FirstName,LastName,OrderDate
+From Customer,OrderTable;
+
+select *From ProductTable
+Where IsDiscontinued = 'True';
+
+select IsDiscontinued,Quantity
+From ProductTable,OrderItemTb
+Where IsDiscontinued='False';
+
+
+Select ProductCategory,Product_sup
+From ProductTable;
+
+select ProductTable.UnitPrice,
+Customer.FirstName,
+ProductTable.Id From ProductTable Inner Join Customer on ProductTable.Id=Customer.Id;
+
+Select Max(Quantity),FirstName
+From OrderItemTb,Customer
+Group by FirstName;
+
+
+select SUBSTRING(FirstName,1,2) AS Extractstring
+From Customer;
+
+Select Substring(Shiping_C_Name,1,1)AS Extractstring
+From ProductTable;
+
+
+
+
+
+
+
+
